@@ -1,0 +1,189 @@
+body{
+    background-color: rgb(210, 191, 227);
+}
+ul{
+    list-style-type: none;
+    background-color: rgb(175, 133, 214);
+    width:100%;
+
+}
+ul li{
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    margin-right:27px ;
+    margin-left: -40px;
+
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+ul li:hover{
+    background-color: aquamarine;
+    transition: 0.5s;
+}
+i{
+    padding-right:10px ;
+}
+#icerik{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    margin-top: 10px;
+    margin-left: -10px;
+    width: 180px;
+
+}
+.icerik-li:hover #icerik{
+    display: block;
+
+}
+.icon{
+    margin-left: 92%;
+    margin-top: -55px;
+    width: 70px;
+    height: 40px;
+
+}
+    .baslik{
+    background-color: aliceblue;
+    color: black;
+    width: auto;
+    padding: 20px;
+    margin-top: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: x-large;
+    color: blueviolet;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    float: left;
+    margin-left: 15px;
+
+}
+.card{
+    width: 325px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 10px;
+    margin-top: -70px;
+    margin-left: 100px;
+}
+.card img{
+    width: 200px;
+    height:300px;
+    margin-left: 60px;
+    margin-top: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23)  ;
+    
+}
+.card-content{
+    padding: 16px;
+}
+.card-content h3{
+    text-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23)  ;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.card-content .btn{
+    display: inline-block;
+    background-color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: white;
+}
+.card-content .para{
+    text-align: center;
+    color: black;
+    font-size: x-large;
+} 
+.satanlar{
+    background-color: aliceblue;
+    color: black;
+    width: 1390px;
+    padding: 20px;
+    margin-top: -5px;
+    height: 50px;
+    text-align: center;
+    font-size: x-large;
+    color: blueviolet;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23) ;
+}
+.kargo{
+    background-color: aliceblue;
+    color: black;
+    width: auto;
+    padding: 20px;
+    margin-top: 800px;
+    height: 50px;
+    text-align: center;
+    font-size: x-large;
+    color: blueviolet;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23) ;
+}
+.kayitol{
+    background-color: rgb(229, 235, 200);
+    margin-top: 750px;
+    height: 500px;
+    width: auto;
+}
+.sorgu{
+    text-align: center;
+    color: black;
+    padding-top:30px;
+    font-size: large;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23) ;
+}
+.kayitol {
+height: 200px;
+width: auto;
+}
+.kayitol{
+    text-align: center;
+    margin-top: 1500px;
+}
+.buton1{
+    color:black;
+    font-size: medium;
+    font-style: italic;
+    width: 400px;
+    height: 50px;
+    border-radius: 5px;
+}
+.buton1:hover{
+    background-color: blueviolet;
+}
+.giris{
+    background-color: aliceblue;
+    color: black;
+    width: 1390px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    text-align: center;
+    font-size: x-large;
+    color: blueviolet;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23)  ;
+}
+.resim{
+    padding-left: 300px;
+   margin-left: 300px;
+   padding-top: 30px;
+ position: absolute;
+}
+.kitap1{
+    margin-top: 100px;
+}

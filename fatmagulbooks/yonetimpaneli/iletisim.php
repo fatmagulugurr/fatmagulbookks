@@ -1,0 +1,94 @@
+<?php
+@session_start();
+$yt= $_SESSION["yonetici_adi"];
+
+if($yt == null){
+    header("location: giris.php");
+}
+
+?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css1/yonetim.css">
+    <title>İLETİŞİM</title>
+</head>
+<style>
+            table {
+    border-collapse: collapse;
+    background-color: #fff;
+    margin-top:50px;
+    margin-left:200px;
+
+  }
+  table tr, table td, table th {
+    border: 1px solid #bbb;
+    padding: 10px 20px;
+   }
+   .duzen{
+    text-decoration:none;
+    border-style:solid;
+    border-radius:5px;
+    color:black;
+    margin-left:2px;
+   }
+   .duzen:hover{
+    background-color: blueviolet;
+}
+    </style>
+<body>
+<ul>
+<li><a href="index.php"><i class="fa-solid fa-house"></i>ANASAYFA</a></li>
+        <li><a href="siparis.php"><i class="fa-solid fa-cart-plus"></i></i>SİPARİŞLER</a></li>
+        <li><a href="iletisim.php"><i class="fa-solid fa-address-book"></i>İLETİŞİM</a></li>
+        <li><a href="yonetimurunler/urunler.php"><i class="fa-solid fa-landmark"></i>ÜRÜNLER</a></li>
+        <li><a href="listeleme.php"><i class="fa-solid fa-list"></i>KULLANICILAR</a></li>
+        <?php
+          if(@$_SESSION["yonetici_adi"]!=null){
+         echo "
+           <li><a href='cikis.php'><i class='fa-solid fa-right-to-bracket'></i>ÇIKIŞ YAP</a></li> ";
+        }
+    
+        ?>
+
+    </ul>
+    <img class="icon" src="resimler/cicek.jpg" alt="resim">
+    <div class="satanlar"><p><i>İLETİŞİM</i></p></div>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <table border="1"class="tablo">
+    <thead>
+    <tr> 
+    <th>KULLANICI ADI:</th>
+    <th>E-MAİL:</th>
+    <th>KONU:</th>
+    <th>MESAJ:</th>
+     </tr>
+    </thead>
+      <tbody>
+    <?php
+     $baglan=mysqli_connect("localhost","root","","fatmagulbooks");
+     $sorgu = mysqli_query($baglan, "select*from iletisim_tb");
+     while($list=mysqli_fetch_array($sorgu)){
+        echo "<tr>
+        <td>$list[kullanici_adi]</td>
+        <td>$list[e_mail]</td>
+        <td>$list[konu]</td>
+        <td>$list[mesaj]</td>
+        </td>
+        </tr>";
+         }
+         if($_POST){ 
+            $kullanici_adi=$_POST["kullanici_adi"];
+            $e_mail=$_POST["e_mail"];
+            $konu=$_POST["konu"];
+            $mesaj=$_POST["mesaj"];
+           }
+         ?>
+          </tbody>
+        </table>
+     
+ 
+</body>
+</html>
